@@ -1,0 +1,1 @@
+Please save trained checkpoints or doenloaded checkpoints for property prediction here.

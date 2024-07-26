@@ -1,0 +1,11 @@
+torch==2.0.1
+datasets
+transformers
+matplotlib
+numpy
+pandas
+tqdm
+biopython
+dmslogo
+seaborn
+logomaker

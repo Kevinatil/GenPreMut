@@ -1,0 +1,17 @@
+__pycache__/
+*.so
+*.egg-info/
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+*.log
+.ipynb_checkpoints
+.env
+.venv
+/logs
+/.idea
+/.vscode
+*.DS_Store
+*__pycache__/
+*.png

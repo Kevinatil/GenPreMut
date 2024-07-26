@@ -1,0 +1,1 @@
+The binding affinity prediction results are saved here.
