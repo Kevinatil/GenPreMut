@@ -28,7 +28,7 @@ for kind in ['model1','model2']:
     seqs=seq1.intersection(seq2)
     seqs=list(seqs)
 
-    f=open(os.path.join(data_root, 'predict/df/seqs_final_{}_{}.txt'.format(rbd_name, kind)), 'w')
+    f=open(os.path.join(data_root, 'predicts/df/seqs_final_{}_{}.txt'.format(rbd_name, kind)), 'w')
     for seq in seqs:
         f.write('{}\n'.format(seq))
     f.close()
@@ -49,4 +49,4 @@ for kind in ['model1','model2']:
     for i in nums.keys():
         freqs.append([i,nums[i]])
     df=pd.DataFrame(freqs,columns=['mutation','frequency'])
-    df.sort_values(['frequency'],ascending=False).to_csv(os.path.join(data_root, 'predict/df/mut_freq_{}_{}.csv'.format(rbd_name, kind)), index=False)
+    df.sort_values(['frequency'],ascending=False).to_csv(os.path.join(data_root, 'predicts/df/mut_freq_{}_{}.csv'.format(rbd_name, kind)), index=False)

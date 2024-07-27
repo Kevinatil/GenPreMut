@@ -13,6 +13,8 @@
 - sequence_screening
     - property_prediction
     - quantified_antibody_barrier_score
+        - prepare_model1.py
+        - prepare_model2.py
         - antibody_barrier.py
     - ranking
         - merge_predicts.py
