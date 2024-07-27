@@ -5,7 +5,7 @@ import pandas as pd
 import pickle
 from tqdm import tqdm
 
-# model1 use_res_clean.csv, supplementary2.csv download: https://github.com/jianfcpku/convergent_RBD_evolution
+# model2 antibody_dms_merge_no_filter_clean.csv, antibody_info.csv download: https://github.com/jianfcpku/SARS-CoV-2-reinfection-DMS
 
 model_path = 'ckpt'
 
