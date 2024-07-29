@@ -133,3 +133,48 @@ After PLM finetuning, we generate 1,000 sequences based on the adjusted residue 
 It takes less than 10 minutes to finetune PLM, and several seconds to generate sequences. Besides, It will visualize the mutation frequencies of the collected sequence set and generated sequences.
 
 
+- Sequence screening
+
+We provide our predicted properties for 1 million generated sequences with BA.2.1 as parent node. We show the calculation of quantified antibody barrier score, and screen the generated sequences to get the high risk variants as well as the high risk mutation types.
+
+
+
+It will visualize the correctly predicted mutation types in the logo plot.
+
+
+## Get initial sequence set
+
+To get initial sequence set, please choose one variant as parent node as mutation start variant. For validation experiment, a cutoff node is also needed, which is the endpoint of initial sequence collection.
+
+For example, we take BA.2.1 as parent node, and collect sequences after parent node and before BA.3.
+
+<!-- 【爬虫过程怎么写？】 -->
+
+Please download the latest spike protein sequences on [GISAID](https://www.epicov.org/epi3/frontend), and adjust the data path in `get_init_sequence/get_init_data.py`. If access is denied, it may be necessary to create an account first.
+
+The downloaded fasta file may contain bad lines, which may cause parsing error. If so, please delete bad lines with the following script before parsing.
+
+```python
+path = os.path.join(data_root, "spikeprot", "spikeprot0304.fasta")
+f = open(path, "r")
+f_new = open(path + "_new.fasta", "w")
+count = 0
+for line in f:
+    try:
+        f_new.write(line.encode('ascii', 'ignore').decode('ascii'))
+        count += 1
+    except:
+        print("Ended")
+        break
+    
+f.close()
+f_new.close()
+print(count)
+```
+
+Run the following script to get the initial sequences, and calculate the mutation frequencies of each site.
+
+```shell
+python get_init_sequence/get_init_data.py
+```
+
