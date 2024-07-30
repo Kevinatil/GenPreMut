@@ -23,24 +23,20 @@ parent_node = {
 csv_path=os.path.join(data_root, 'GISAID_ID', 'total_csv')
 all_files=os.listdir(csv_path)
 
-def file_filter(name, rbd_name):
+def file_filter(name, nicks, rbd_name):
     if rbd_name == "XBB.1.5":
         return "XBB" in name
-
     else:
-        if re.match('BA\.[0-9]+\..+',name):
-            tp_=name.split('.')
-            if int(tp_[1])>=2:
-                return True
-        elif re.match('B[B-Z].+',name):
-            return True
-        elif re.match('[C-Z].+',name):
-            return True
-        return False
+        return name in nicks
+
+f = open('candidate_nicks_{}.txt'.format(rbd_name), 'r')
+nicks = f.readlines()
+f.close()
+nicks = [nick.strip() for nick in nicks]
 
 filtered_file=[]
 for file in all_files:
-    if file_filter(file):
+    if file_filter(file, nicks, rbd_name):
         filtered_file.append(file)
         
         
