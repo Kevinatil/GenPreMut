@@ -45,7 +45,7 @@ if 0:
     # If so, please delete bad lines before parsing.
     
     # Please download the latest spikeprot.fasta on GISAID
-    path = os.path.join(data_root, "spikeprot", "spikeprot0304.fasta")
+    path = os.path.join(data_root, "spikeprot", "spikeprot.fasta")
     f = open(path, "r")
     f_new = open(path + "_new.fasta", "w")
     count = 0
@@ -67,7 +67,7 @@ if 0:
 
 
 ## Extract sequences with ID
-base_path = os.path.join(data_root, "spikeprot", "spikeprot0304.fasta_new.fasta")
+base_path = os.path.join(data_root, "spikeprot", "spikeprot.fasta_new.fasta")
 target_save_path = os.path.join(data_root, "split_data", "{}_record.fasta".format(rbd_name))
 
 def get_ids(filelist):
