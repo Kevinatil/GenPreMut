@@ -137,7 +137,7 @@ It takes less than 10 minutes to finetune PLM, and several seconds to generate s
 
 We provide our predicted properties for 1 million generated sequences with BA.2.1 as parent node. We show the calculation of quantified antibody barrier score, and screen the generated sequences to get the high risk variants as well as the high risk mutation types.
 
-[<img src="https://colab.research.google.com/assets/colab-badge.svg">](https://colab.research.google.com/github/Kevinatil/GenPreMut/blob/main/quick_start/SequenceScreen.ipynb)
+[<img src="https://colab.research.google.com/assets/colab-badge.svg">](https://colab.research.google.com/github/Kevinatil/GenPreMut/blob/main/quick_start/SequenceGenerate.ipynb)
 
 
 It will visualize the correctly predicted mutation types in the logo plot.
