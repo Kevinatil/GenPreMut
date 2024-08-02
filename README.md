@@ -143,6 +143,8 @@ We provide our predicted properties for 1 million generated sequences with BA.2.
 It will visualize the correctly predicted mutation types in the logo plot.
 
 
+
+
 ## Get initial sequence set
 
 To get initial sequence set, please choose one variant as parent node as mutation start variant. For validation experiment, a cutoff node is also needed, which is the endpoint of initial sequence collection.
@@ -191,6 +193,7 @@ After PLM finetuning, run the following code to generate sequences. The generati
 ```shell
 python sequence_generate/sequence_generate/generate_sequences.py
 ```
+
 
 ## Sequence screening
 
@@ -268,5 +271,48 @@ Run the following script to screen generated sequences, and calculate the freque
 
 ```shell
 python sequence_screening/ranking/screening.py
+```
+
+
+## Validation experiments
+
+We conduct several validation experiments to show the stability and effectiveness of our screening pipeline.
+
+### Generation scale
+
+We first conduct ablation experiment to find the best generation scale. Multiple sets of generation experiments with an interval of 50,000 are performed to explore whether the escape capability increment approaches 0 under two types of herd-level antibody barrier escape estimation models.
+
+We provide the calculated antibody barrier scores of two antibody barrier models for all the generated sequences in the experiments in `data/generate_scale`. Run the following script to draw the escape capability increment curves.
+
+```shell
+python validation_experiments/generate_scale/draw_scale_changing.py
+```
+
+### Stability
+
+We conduct 3 repeat experiments with BA.2.1 as parent node, and show the stability of the pipeline with 2 experiments.
+
+- Screened number
+
+We calculate the sequence number after each screening step, and compare between different repeat experiments.
+
+```shell
+python validation_experiments/stability/screened_num.py
+```
+
+- Ranking result
+
+We compare the ranking results of mutation types between different repeat experiments, and calculate the correlation coefficient to show the ranking stability.
+
+```shell
+python validation_experiments/stability/rank_robust.py
+```
+
+### Effectiveness
+
+We visualize the ranking change during the screening process to show the effectiveness of our pipeline.
+
+```shell
+python validation_experiments/rank_change/rank_change.py
 ```
 
