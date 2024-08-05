@@ -316,3 +316,37 @@ We visualize the ranking change during the screening process to show the effecti
 python validation_experiments/rank_change/rank_change.py
 ```
 
+
+## Model compare
+
+We compare MLAEP with our screening pipeline on the capability of discovering high risk mutation types.
+
+[MLAEP](https://www.nature.com/articles/s41467-023-39199-6) can predict the binding affinity and antibody escape of RBD sequences. Based on the prediction model, it adopts genetic algorithm to perform population evolution on initial variant sequences to get high risk variants.
+
+Take BA.2.1 as an example, we choose the prevalent variants before BA.2.1 as initial sequence set (provided in `data/logo/MLAEP/origin_BA.2.1.csv`). Run the following script to conduct sequence evolution.
+
+```shell
+python model_compare/MLAEP/src/synthetic.py 0.8 data/logo/MLAEP/origin_BA.2.1.csv data/logo/MLAEP/success_BA.2.1_seq.txt data/logo/MLAEP/failed_seq.txt
+
+python model_compare/MLAEP/txt2csv.py
+```
+
+We visualize the predicted high risk mutation types with logo plot.
+
+```shell
+# draw GenPreMut
+python model_compare/draw_site_freq.py
+
+# draw MLAEP
+python model_compare/draw_site_KL.py
+```
+
+We also visualize the comparison of target mutation type rankings between two pipelines.
+
+```shell
+python model_compare/draw_rank_change.py
+```
+
+# License
+
+This project is covered under the **Apache 2.0 License**.
