@@ -148,9 +148,9 @@ It will visualize the correctly predicted mutation types in the logo plot.
 
 
 
-## Get initial sequence set
+## Get integrated initial sequence set
 
-To get initial sequence set, please choose one variant as starting lineage as mutation start variant. For validation experiment, a cutoff node is also needed, which is the endpoint of initial sequence collection.
+To get initial sequence set, please choose one variant as starting lineage as mutation start variant. For validation experiment, a cutoff lineage is also needed, which is the endpoint of initial sequence collection.
 
 Please download the latest spike protein sequences on [GISAID](https://www.epicov.org/epi3/frontend), and adjust the data path in `get_init_sequence/get_init_data.py`. If access is denied, it may be necessary to create an account first.
 
