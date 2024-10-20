@@ -1,6 +1,6 @@
 # GenPreMut
 
-The official code repository of "Generative prevalent mutation prediction across the entire evolutionary landscape through host-to-herd simulated evolution".
+The official code repository of "Deep-learning-enabled generative prevalent mutation prediction through host-to-herd *in silico* virus evolution".
 
 - [Overview](#overview)
 - [System Requirements](#system-requirements)
@@ -198,7 +198,7 @@ python sequence_generate/sequence_generate/generate_sequences.py
 ```
 
 
-## Sequence screening
+## Variant screening
 
 We adopt host-level and herd-level screening. For host-level, we adopt prediction models in [E2VD](https://github.com/ZhiweiNiepku/E2VD) to predict key properties for virus to survive and spread. For herd-level, we propose quantified antibody barrier score to validate the capability of virus to break through the immune barrier of humans.
 
