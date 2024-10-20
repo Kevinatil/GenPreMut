@@ -123,7 +123,7 @@ It takes less than 10 minutes to install python dependencies on a standard compu
 
 ## Quick start
 
-We provide a quick demo for our sequence screening pipeline. BA.2.1 is adopted as parent node.
+We provide a quick demo for our sequence screening pipeline. BA.2.1 is adopted as starting lineage.
 
 - PLM finetuning and sequence generation
 
@@ -138,7 +138,7 @@ It takes less than 10 minutes to finetune PLM, and several seconds to generate s
 
 - Sequence screening
 
-We provide our predicted properties for 1 million generated sequences with BA.2.1 as parent node. We show the calculation of quantified antibody barrier score, and screen the generated sequences to get the high risk variants as well as the high risk mutation types.
+We provide our predicted properties for 1 million generated sequences with BA.2.1 as starting lineage. We show the calculation of quantified antibody barrier score, and screen the generated sequences to get the high risk variants as well as the high risk mutation types.
 
 [<img src="https://colab.research.google.com/assets/colab-badge.svg">](https://colab.research.google.com/github/Kevinatil/GenPreMut/blob/main/quick_start/SequenceScreen.ipynb)
 
@@ -150,7 +150,7 @@ It will visualize the correctly predicted mutation types in the logo plot.
 
 ## Get initial sequence set
 
-To get initial sequence set, please choose one variant as parent node as mutation start variant. For validation experiment, a cutoff node is also needed, which is the endpoint of initial sequence collection.
+To get initial sequence set, please choose one variant as starting lineage as mutation start variant. For validation experiment, a cutoff node is also needed, which is the endpoint of initial sequence collection.
 
 Please download the latest spike protein sequences on [GISAID](https://www.epicov.org/epi3/frontend), and adjust the data path in `get_init_sequence/get_init_data.py`. If access is denied, it may be necessary to create an account first.
 
@@ -203,7 +203,7 @@ python sequence_generate/sequence_generate/generate_sequences.py
 We adopt host-level and herd-level screening. For host-level, we adopt prediction models in [E2VD](https://github.com/ZhiweiNiepku/E2VD) to predict key properties for virus to survive and spread. For herd-level, we propose quantified antibody barrier score to validate the capability of virus to break through the immune barrier of humans.
 
 
-### Host-level property prediction model
+### Host-level expression prediction model
 
 - Data process
 
@@ -245,7 +245,7 @@ After property prediction, run the merging code to merge prediction results.
 python sequence_screening/ranking/merge_predicts.py
 ```
 
-### Herd-level quantified antibody barrier score
+### Herd-level quantified antibody barrier model
 
 For the calculation of quantified antibody barrier score, please download the antibody escape data first. We use two antibody escape datasets from two studies.
 
@@ -277,7 +277,7 @@ python sequence_screening/ranking/screening.py
 ```
 
 
-## Validation experiments
+## Ablation experiments
 
 We conduct several validation experiments to show the stability and effectiveness of our screening pipeline.
 
@@ -291,9 +291,9 @@ We provide the calculated antibody barrier scores of two antibody barrier models
 python validation_experiments/generate_scale/draw_scale_changing.py
 ```
 
-### Stability
+### Prediction stability
 
-We conduct 3 repeat experiments with BA.2.1 as parent node, and show the stability of the pipeline with 2 experiments.
+We conduct 3 repeat experiments with BA.2.1 as starting lineage, and show the stability of the pipeline with 2 experiments.
 
 - Screened number
 
@@ -311,7 +311,7 @@ We compare the ranking results of mutation types between different repeat experi
 python validation_experiments/stability/rank_robust.py
 ```
 
-### Effectiveness
+### Screening effectiveness
 
 We visualize the ranking change during the screening process to show the effectiveness of our pipeline.
 
@@ -320,7 +320,7 @@ python validation_experiments/rank_change/rank_change.py
 ```
 
 
-## Model compare
+## Model comparison
 
 We compare MLAEP with our screening pipeline on the capability of discovering high risk mutation types.
 
