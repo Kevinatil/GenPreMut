@@ -12,9 +12,12 @@ The official code repository of "Generative prevalent mutation prediction across
 
 # Overview
 
-To link selective pressures inside and outside the host, we propose GenPreMut, a generative prediction pipeline for prevalent mutations spanning intra-host evolution to herd-level evolution. The protein language model (PLM) guided by mutation probability are employed as a generator of massive mutations, and the prediction models of selective pressures within and outside the host are adopted as diverse evolution drivers.
-A strategy linking intra-host evolution and herd-level evolution is proposed to introduce herd-level selective pressures, transitioning intra-host molecular-level mutational drivers to herd-level antibody barrier.
-GenPreMut accurately reproduces previous high-risk mutations, significantly outperforming the state-of-the-art prediction methods.
+Predicting the mutation prevalence trends of emerging viruses in the real world is an efficient means to update vaccines or drugs in advance.
+It is crucial to develop a computational method spanning from the host level to the herd level for prevalent mutation prediction as virus evolves within and between hosts involving the impact of multiple selective pressures.
+Here, a deep-learning generative prediction framework for real-world prevalent mutations, GenPreMut, is developed with a novel host-to-herd selective pressure simulation strategy.
+Through the paradigm of host-to-herd *in silico* virus evolution, GenPreMut reproduces previous real-world prevalent mutations for multiple lineages with significant accuracy improvements over state-of-the-art methods.
+More importantly, GenPreMut correctly predicts future prevalent mutations that dominate the pandemic in the real world more than half a year in advance with *in vitro* experimental validation.
+Overall, GenPreMut demonstrates a proactive approach to the prevention of emerging viral infections, accelerating the process of discovering future prevalent mutations with the power of generative prediction.
 
 
 # System Requirements
