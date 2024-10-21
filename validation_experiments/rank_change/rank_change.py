@@ -10,7 +10,7 @@ data_root = 'data/rank_change/{}'.format(rbd_name)
 # only choose top 100 mutations
 sites_dict = {
     "BA.2.1": ['L452R', 'L452Q', 'R346T', 'F486S', 'F486P', 'F486V', 'F490S', 'K444T'],
-    "BA.5.1": ['R346T', 'R346S', 'K444T', 'G446R', 'F490S']
+    "BA.5.1": ['R346T', 'R346S', 'K444T', 'G446R', 'F490S', 'N450D']
 }
 
 # the mutation number comparing with wild type RBD

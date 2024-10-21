@@ -19,6 +19,7 @@ Through the paradigm of host-to-herd *in silico* virus evolution, GenPreMut repr
 More importantly, GenPreMut correctly predicts future prevalent mutations that dominate the pandemic in the real world more than half a year in advance with *in vitro* experimental validation.
 Overall, GenPreMut demonstrates a proactive approach to the prevention of emerging viral infections, accelerating the process of discovering future prevalent mutations with the power of generative prediction.
 
+![overview](./media/overview.png)
 
 # System Requirements
 
