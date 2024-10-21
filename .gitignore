@@ -14,4 +14,3 @@ pip-delete-this-directory.txt
 /.vscode
 *.DS_Store
 *__pycache__/
-*.png
