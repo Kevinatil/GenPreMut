@@ -1,4 +1,4 @@
-# GenPreMut
+# ViralForesight
 
 The official code repository of "Deep-learning-enabled generative prevalent mutation prediction through host-to-herd *in silico* virus evolution".
 
@@ -14,10 +14,10 @@ The official code repository of "Deep-learning-enabled generative prevalent muta
 
 Predicting the mutation prevalence trends of emerging viruses in the real world is an efficient means to update vaccines or drugs in advance.
 It is crucial to develop a computational method spanning from the host level to the herd level for prevalent mutation prediction as virus evolves within and between hosts involving the impact of multiple selective pressures.
-Here, a deep-learning generative prediction framework for real-world prevalent mutations, GenPreMut, is developed with a novel host-to-herd selective pressure simulation strategy.
-Through the paradigm of host-to-herd *in silico* virus evolution, GenPreMut reproduces previous real-world prevalent mutations for multiple lineages with significant accuracy improvements over state-of-the-art methods.
-More importantly, GenPreMut correctly predicts future prevalent mutations that dominate the pandemic in the real world more than half a year in advance with *in vitro* experimental validation.
-Overall, GenPreMut demonstrates a proactive approach to the prevention of emerging viral infections, accelerating the process of discovering future prevalent mutations with the power of generative prediction.
+Here, a deep-learning generative prediction framework for real-world prevalent mutations, ViralForesight, is developed with a novel host-to-herd selective pressure simulation strategy.
+Through the paradigm of host-to-herd *in silico* virus evolution, ViralForesight reproduces previous real-world prevalent mutations for multiple lineages with significant accuracy improvements over state-of-the-art methods.
+More importantly, ViralForesight correctly predicts future prevalent mutations that dominate the pandemic in the real world more than half a year in advance with *in vitro* experimental validation.
+Overall, ViralForesight demonstrates a proactive approach to the prevention of emerging viral infections, accelerating the process of discovering future prevalent mutations with the power of generative prediction.
 
 ![overview](./media/overview.png)
 
@@ -132,7 +132,7 @@ We provide a sequence subset for quick start, containing 10,000 sequences. This 
 
 After PLM finetuning, we generate 1,000 sequences based on the adjusted residue distribution.
 
-[<img src="https://colab.research.google.com/assets/colab-badge.svg">](https://colab.research.google.com/github/Kevinatil/GenPreMut/blob/main/quick_start/SequenceGenerate.ipynb)
+[<img src="https://colab.research.google.com/assets/colab-badge.svg">](https://colab.research.google.com/github/Kevinatil/ViralForesight/blob/main/quick_start/SequenceGenerate.ipynb)
 
 It takes less than 10 minutes to finetune PLM, and several seconds to generate sequences. Besides, It will visualize the mutation frequencies of the collected sequence set and generated sequences.
 
@@ -141,7 +141,7 @@ It takes less than 10 minutes to finetune PLM, and several seconds to generate s
 
 We provide our predicted properties for 1 million generated sequences with BA.2.1 as starting lineage. We show the calculation of quantified antibody barrier score, and screen the generated sequences to get the high risk variants as well as the high risk mutation types.
 
-[<img src="https://colab.research.google.com/assets/colab-badge.svg">](https://colab.research.google.com/github/Kevinatil/GenPreMut/blob/main/quick_start/SequenceScreen.ipynb)
+[<img src="https://colab.research.google.com/assets/colab-badge.svg">](https://colab.research.google.com/github/Kevinatil/ViralForesight/blob/main/quick_start/SequenceScreen.ipynb)
 
 
 It will visualize the correctly predicted mutation types in the logo plot.
@@ -338,7 +338,7 @@ python model_compare/MLAEP/txt2csv.py
 We visualize the predicted high risk mutation types with logo plot.
 
 ```shell
-# draw GenPreMut
+# draw ViralForesight
 python model_compare/draw_site_freq.py
 
 # draw MLAEP
