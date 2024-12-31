@@ -1,6 +1,6 @@
 # ViralForesight
 
-The official code repository of "Deep-learning-enabled generative prevalent mutation prediction through host-to-herd *in silico* virus evolution".
+The official code repository of "Generative prediction of real-world prevalent SARS-CoV-2 mutation with in silico virus evolution".
 
 - [Overview](#overview)
 - [System Requirements](#system-requirements)
@@ -10,16 +10,6 @@ The official code repository of "Deep-learning-enabled generative prevalent muta
 - [License](#license)
 
 
-# Overview
-
-Predicting the mutation prevalence trends of emerging viruses in the real world is an efficient means to update vaccines or drugs in advance.
-It is crucial to develop a computational method spanning from the host level to the herd level for prevalent mutation prediction as virus evolves within and between hosts involving the impact of multiple selective pressures.
-Here, a deep-learning generative prediction framework for real-world prevalent mutations, ViralForesight, is developed with a novel host-to-herd selective pressure simulation strategy.
-Through the paradigm of host-to-herd *in silico* virus evolution, ViralForesight reproduces previous real-world prevalent mutations for multiple lineages with significant accuracy improvements over state-of-the-art methods.
-More importantly, ViralForesight correctly predicts future prevalent mutations that dominate the pandemic in the real world more than half a year in advance with *in vitro* experimental validation.
-Overall, ViralForesight demonstrates a proactive approach to the prevention of emerging viral infections, accelerating the process of discovering future prevalent mutations with the power of generative prediction.
-
-![overview](./media/overview.png)
 
 # System Requirements
 
